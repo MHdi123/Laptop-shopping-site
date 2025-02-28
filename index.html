@@ -16,7 +16,17 @@
         <nav class="main-menu">
             <ul>
                 <li><a href="#">صفحه اصلی</a></li>
-                <li><a href="#">محصولات <i class="fas fa-angle-down"></i></a></li>
+                <li class="dropdown">
+                    <a href="#">محصولات <i class="fas fa-angle-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">هدست</a>
+                        <a href="#">لپ‌تاپ</a>
+                        <a href="#">کیبورد</a>
+                        <a href="#">چاپگر</a>
+                        <a href="#">کیس</a>
+                        <a href="#">مانیتور</a>
+                    </div>
+                </li>
                 <li><a href="#">وبلاگ</a></li>
                 <li><a href="#">درباره ما</a></li>
             </ul>
@@ -45,7 +55,7 @@
             <h2>انتخاب هوشمند <span>عملکرد بی‌نهایت!</span></h2>
             <p>اگر به دنبال تجهیزاتی هستید که شما را برای آینده آماده کند، جای درستی آمده‌اید. خرید از ما، 
                 جدیدترین تکنولوژی‌ها را در دستانتان قرار می‌دهد.</p>
-            <a href="#" class="btn">مشاهده محصولات</a>
+                <a href="products.html" class="btn">مشاهده محصولات</a>
         </div>
         <div class="image">
             <img src="./img/laptop-white-background-isolated-top-view.png" alt="لپ‌تاپ">
@@ -160,6 +170,22 @@
         menuToggle.addEventListener("click", () => {
             mobileMenu.classList.toggle("active");
         });
+            // دکمه ورود / ثبت‌نام
+    document.querySelector(".login-btn").addEventListener("click", function() {
+      window.location.href = "login.html"; // مسیر صفحه لاگین خود را اینجا قرار دهید
+    });
+
+    /*************************زیر منو**********************/
+    document.querySelector('.dropdown').addEventListener('mouseenter', function() {
+    this.classList.add('show');
+    this.querySelector('.dropdown-menu').classList.add('show');
+});
+
+document.querySelector('.dropdown').addEventListener('mouseleave', function() {
+    this.classList.remove('show');
+    this.querySelector('.dropdown-menu').classList.remove('show');
+});
+
     </script>
 
 </body>
